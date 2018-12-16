@@ -1,5 +1,4 @@
 # Feedback-System
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 ## Abstract
 In Feedback form the faculty members will create feedback form as per the requirements and it
 will be assigned to users as per the Unique ID’s assigned by faculty. The student will provide
