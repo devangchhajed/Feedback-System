@@ -1,8 +1,7 @@
 
 
-
         <footer class="container bg-4 text-center footer">
-            <p>Developed By <a href="./about.php">Procodics</a></p>
+            <p><?php echo "©".date("Y").", Made with ♥ for MCA"; ?></p>
         </footer>
     </body>
 

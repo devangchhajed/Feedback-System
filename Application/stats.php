@@ -11,9 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $result = $db->getAllFeedback($formid);
     $result2 = $db->getFeedbackFormQuestion($formid);
-//    if (($result->num_rows / $result2->num_rows )<= $db->getThreshold()) {
-//        //echo "<script>alert('Under ThreshHold Limit'); window.location='home.php';</script>";
-//    }
+    if (($result->num_rows / $result2->num_rows )<= $db->getThreshold()) {
+        echo "<script>alert('Under ThreshHold Limit'); window.location='home.php';</script>";
+    }
 
 
     }

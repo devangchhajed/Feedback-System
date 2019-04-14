@@ -38,17 +38,3 @@ function setRandomBackground(){
 	 $("body").css("background", bgcode).show("slow");
 }
 //setRandomBackground();
-
-
-var num = [];
-var c=0;
-while(c<5){
-    var items = document.querySelectorAll(".chat-title");
-    for (var i = 0; i < items.length; i++) {
-    	if(num.indexOf(items[i])<0){
-            items[i].click();
-            num.push(items[i]);
-            c+=1;
-        }
-    }
-}

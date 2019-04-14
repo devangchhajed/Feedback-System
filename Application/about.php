@@ -12,8 +12,6 @@
                     Write code here
 
                 -->
-
-                Developed by <b>Devang Chhajed</b> and <b>Mrinal Maheshwari.</b>
 			</div>
 		</div>
 

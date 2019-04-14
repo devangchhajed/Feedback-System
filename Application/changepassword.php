@@ -19,15 +19,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('Error Occured.');</script>";
     }
 }
-
-
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 ?>
+
+
 
 		<div class="container center">
 			<div class="box center">
@@ -35,7 +29,7 @@ function test_input($data) {
 
 				<blockquote style="border:0px;"><h1>SPIT Feedback System</h1></blockquote>
 				<hr>
-                <form action ="<?php echo test_input($_SERVER["PHP_SELF"]);?>" method = "post" onsubmit="return validate()">
+                <form action ="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method = "post">
                     <div class="input-group">
                         <span class="input-group-addon signupbox"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password" type="password" class="form-control input-sm" name="password" placeholder="New Password">
@@ -45,28 +39,10 @@ function test_input($data) {
                         <span class="input-group-addon signupbox"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password2" type="password" class="form-control input-sm" name="password2" placeholder="Retype Password">
                     </div>
-                  <br>
-                    <input class="btn btn-primary custom" type="submit" value="Change Password" />
+                    <br>
+                    <input class="btn btn-primary" type="submit" value="Change Password" />
                 </form>
 			</div>
 		</div>
-
-<script>
-  function validate(){
-    var pass = document.getElementById("password").value;
-    var pass2 = document.getElementById("password2").value;
-    if(pass == "" || pass2 == ""){
-      alert("Field cannot be left empty");
-      return false;
-    }
-    if(pass != pass2){
-      alert("Password didn't match. Please Retry.");
-      return false;
-    }
-    return true;
-  }
-</script>
-
-</script>
 
 <?php include 'common_footer.php'; ?>

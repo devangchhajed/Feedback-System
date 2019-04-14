@@ -276,7 +276,7 @@ class DB_Functions
      * */
 
     public function getAllFeedback($formid){
-        $sql="select feedback_questions.question, feedback_questions.type, feedback_record.answer from feedback_questions INNER JOIN feedback_record ON feedback_record.feedback_question_uid = feedback_questions.uid where feedback_record.feedback_form_uid = ".$formid;
+        $sql="select feedback_questions.question, feedback_questions.type, feedback_record.answer from feedback_questions INNER JOIN feedback_record ON feedback_record.feedback_questions_uid = feedback_questions.uid where feedback_record.feedback_form_uid = ".$formid;
         $result = $this->conn->query($sql);
         return $result;
     }
