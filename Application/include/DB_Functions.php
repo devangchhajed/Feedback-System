@@ -280,6 +280,29 @@ class DB_Functions
         $result = $this->conn->query($sql);
         return $result;
     }
+    public function getQuesFeedback($quesid){
+        $sql="SELECT answer FROM feedback_record WHERE feedback_questions_uid=".$quesid;
+        $result = $this->conn->query($sql);
+        return $result;
+    }
+
+    public function getQuestionStats($quesid){
+        $sql="SELECT answer, count(*) as count FROM feedback_record WHERE feedback_questions_uid=".$quesid." group by `answer`";
+        $ans['Very Poor']=0;
+        $ans['Poor']=0;
+        $ans['Average']=0;
+        $ans['Good']=0;
+        $ans['Very Good']=0;
+        $result = $this->conn->query($sql);
+        while($row = $result->fetch_assoc()) {
+            $ans[$row['answer']]=$row['count'];
+        }
+        $out = '['.$ans['Very Poor'].','.$ans['Poor'].','.$ans['Average'].','.$ans['Good'].','.$ans['Very Good'].']';
+        return $out;
+    }
+
+
+
 
     public function studentsLeftForFeedback($formid){
         $sql="SELECT user.name FROM user INNER JOIN assignment ON assignment.user_uid=user.loginid where assignment.status = 0 and assignment.feedback_form_uid=".$formid;

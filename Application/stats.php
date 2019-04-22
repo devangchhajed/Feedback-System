@@ -1,6 +1,6 @@
 <?php include 'common_header.php'; ?>
 <?php include 'navbar.php'; ?>
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <?php
 
 
@@ -35,6 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#record">View Records</a></li>
+                <li><a data-toggle="tab" href="#dataanalysis">Analysis</a></li>
                 <li><a data-toggle="tab" href="#sturev">Students Not Reviewed</a></li>
             </ul>
             <div class="tab-content">
@@ -71,6 +72,60 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         </tbody>
                     </table>
                 </div>
+                <div id="dataanalysis" class="tab-pane fade text-center">
+                    <table class="table table-striped">
+                        <?php
+
+                        $result = $db->getFeedbackFormQuestion($formid);
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()){
+                                if($row['type']=="rating")
+                                {
+                                    echo '<tr><td>';
+                                    echo '<b><h2>'.$row['question'].'</h2></b>';
+                                    echo ' <div id="plotly'.$row['uid'].'"></div>';
+                                    ?>
+                                    <script>
+                                        var data = [{
+                                            values: <?php echo $db->getQuestionStats($row['uid']); ?>,
+                                            title:'<?php echo $row['question']; ?>',
+                                            labels: ['Very Poor', 'Poor', 'Average', 'Good', 'Very Good'],
+                                            type: 'pie'
+                                        }];
+
+                                        Plotly.newPlot('<?php echo 'plotly'.$row['uid']; ?>', data, {}, {showSendToCloud:true});
+                                    </script>
+                                    <?php
+
+                                    echo '</td></tr>';
+
+                                }else{
+                                    echo '<tr><td>';
+                                    echo '<b><h2>'.$row['question'].'</h2></b>';
+
+                                    ?>
+
+                                    <table class="table table-striped">
+
+
+                                <?php
+                                    $res = $db->getQuesFeedback($row['uid']);
+                                    while ($frow = $res->fetch_assoc()) {
+                                        echo'<tr>
+                                        <td>'.$frow['answer'].'</td>
+                                    </tr>';
+
+                                    }
+
+                                    echo '</table>';
+                                echo '</td></tr>';
+
+                                }
+                            }
+                        }
+                        ?>
+                    </table>
+                </div>
                 <div id="sturev" class="tab-pane fade text-center">
                     <table class="table table-striped">
                         <?php
@@ -80,10 +135,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             while($row = $result->fetch_assoc()){
                                 echo '<tr><td>';
                                 $result1 = $db->getStudentNameFormLoginid($row['user_uid']);
-                                    if ($result1)
-                                        echo $result1;
-                                    else
-                                        echo $row['user_uid'];
+                                if ($result1)
+                                    echo $result1;
+                                else
+                                    echo $row['user_uid'];
 
 
 
