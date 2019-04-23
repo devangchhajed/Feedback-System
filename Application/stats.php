@@ -73,6 +73,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     </table>
                 </div>
                 <div id="dataanalysis" class="tab-pane fade text-center">
+                    <button class="btn btn-primary" id="printButton" onclick="printB()">Print</button>
+
                     <table class="table table-striped">
                         <?php
 
@@ -83,17 +85,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 {
                                     echo '<tr><td>';
                                     echo '<b><h2>'.$row['question'].'</h2></b>';
-                                    echo ' <div id="plotly'.$row['uid'].'"></div>';
+                                    echo ' <div id="plotly'.$row['uid'].'" style="overflow: hidden;"></div>';
                                     ?>
                                     <script>
                                         var data = [{
                                             values: <?php echo $db->getQuestionStats($row['uid']); ?>,
-                                            title:'<?php echo $row['question']; ?>',
                                             labels: ['Very Poor', 'Poor', 'Average', 'Good', 'Very Good'],
-                                            type: 'pie'
+                                            type: 'pie',
+                                            textinfo:'label+text+value+percent'
                                         }];
 
-                                        Plotly.newPlot('<?php echo 'plotly'.$row['uid']; ?>', data, {}, {showSendToCloud:true});
+                                        var layout={
+                                            title:'<?php echo $row['question']; ?>',
+                                            textinfo:'none'
+                                        }
+
+                                        Plotly.newPlot('<?php echo 'plotly'.$row['uid']; ?>', data, layout, {showSendToCloud:true});
                                     </script>
                                     <?php
 
@@ -152,5 +159,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
+
+    <script>
+            function printB() {
+
+                var content = document.getElementById("dataanalysis").innerHTML;
+                var mywindow = window.open('', 'Print', 'height=600,width=800');
+
+                mywindow.document.write('<html><head><title>Print</title>');
+                mywindow.document.write('</head><body><center><h1><?php echo $db->getFeedbackFormTitle($formid)?></h1></center>\n');
+                mywindow.document.write(content);
+                mywindow.document.write('</body></html>');
+
+                mywindow.document.close();
+                mywindow.focus();
+                mywindow.print();
+                //mywindow.close();
+
+
+
+
+            }
+
+    </script>
 
 <?php include 'common_footer.php'; ?>

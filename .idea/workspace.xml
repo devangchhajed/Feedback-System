@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95499eef-b2fc-4d91-9c31-df23a98a3466" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Feedback-System.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/include/DB_Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/include/DB_Functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/common_footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/common_footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/stats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/studentcorner.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/studentcorner.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,21 +14,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/viewallform.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-226">
-              <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Application/home.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/stats.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="146">
+              <caret line="94" column="64" lean-forward="true" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/common_header.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/common_footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/teacherscorner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -38,8 +55,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/include/DB_Functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="277" column="22" lean-forward="true" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="22" />
+            <state relative-caret-position="782">
+              <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+              <folding>
+                <element signature="n#storeUser#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#checkUser#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#changePassword#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#loginUser#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#checkConnectivity#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#createFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getFeedbackFormTitle#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#checkRangeInFeedbackTable#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#updateFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#deleteFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getFeedbackFormQuestion#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#insertQuestion#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#deleteFormQuestion#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getStudentForm#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#recordFeedback#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getFeedbackStatus#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getAllFeedback#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getQuesFeedback#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getQuestionStats#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#studentsLeftForFeedback#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#studentsUidLeftForFeedback#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getStudentNameFormLoginid#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getStudentNameFormUid#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#getThreshold#0;n#DB_Functions#0;n#!!top" />
+                <element signature="n#setThreshold#0;n#DB_Functions#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,6 +96,7 @@
       <find>feedback</find>
       <find>ans</find>
       <find>feedback_record</find>
+      <find>printBox</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,6 +106,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Application/include/DB_Functions.php" />
+        <option value="$PROJECT_DIR$/Application/studentcorner.php" />
+        <option value="$PROJECT_DIR$/Application/common_footer.php" />
         <option value="$PROJECT_DIR$/Application/stats.php" />
       </list>
     </option>
@@ -75,7 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,6 +145,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,25 +175,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555950495167</updated>
-      <workItem from="1555950504071" duration="4804000" />
+      <workItem from="1555950504071" duration="5404000" />
+      <workItem from="1555958459666" duration="56000" />
+      <workItem from="1556037516263" duration="4508000" />
+      <workItem from="1556042078207" duration="791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4804000" />
+    <option name="totallyTimeSpent" value="10759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25416037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -153,40 +198,107 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/hodspace.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/processing.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/include/DB_Functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="277" column="22" lean-forward="true" selection-start-line="277" selection-start-column="22" selection-end-line="277" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Application/hodspace.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/viewallform.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        <state relative-caret-position="289">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/studentcorner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/home.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/common_header.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/common_footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="92" selection-start-line="8" selection-start-column="92" selection-end-line="8" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/teacherscorner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/include/DB_Functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+          <folding>
+            <element signature="n#storeUser#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#checkUser#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#changePassword#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#loginUser#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#checkConnectivity#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#createFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getFeedbackFormTitle#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#checkRangeInFeedbackTable#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#updateFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#deleteFeedbackForm#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getFeedbackFormQuestion#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#insertQuestion#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#deleteFormQuestion#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getStudentForm#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#recordFeedback#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getFeedbackStatus#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getAllFeedback#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getQuesFeedback#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getQuestionStats#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#studentsLeftForFeedback#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#studentsUidLeftForFeedback#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getStudentNameFormLoginid#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getStudentNameFormUid#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#getThreshold#0;n#DB_Functions#0;n#!!top" />
+            <element signature="n#setThreshold#0;n#DB_Functions#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="146">
+          <caret line="94" column="64" lean-forward="true" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
         </state>
       </provider>
     </entry>

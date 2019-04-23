@@ -27,6 +27,7 @@ $i=1;
 echo'                    
 
                     </tr>';
+        $i++;
     }
     echo "</table>";
 }
