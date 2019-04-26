@@ -3,6 +3,8 @@
 
 
 <?php
+if(!isset($_SESSION['user_type']) or $_SESSION['user_type']!='hod')
+    echo '<script>window.location="index.php"</script>';
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form
@@ -15,6 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result)
             echo "<script>alert('Value Updated.')</script>";
+            echo '<script>window.location="home.php"</script>';
 
     }
 }

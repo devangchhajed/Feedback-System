@@ -4,7 +4,7 @@
 <?php
     $res = $db->createFeedbackForm($_SESSION['user_uuid']);
 if($res == true)
-        echo '<script>window.location="home.php"</script>';
+        echo '<script>window.location="viewallform.php"</script>';
 
 ?>
 

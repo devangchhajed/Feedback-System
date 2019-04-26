@@ -21,17 +21,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $db->getFeedbackForm($formid);
 
     // If result matched $myusername and $mypassword, table row must be 1 row
+    $formcreator="";
     $form_title="";
+    $form_year="";
+    $form_class="";
+    $form_coursecode="";
+    $form_semester="";
+    $form_extrainfo="";
     $fromrange="";
     $torange="";
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
+            $formcreator = $row['createdby'];
             $form_title=$row['title'];
             $fromrange=$row['fromrange'];
             $torange=$row['torange'];
+            $form_year=$row['year'];
+            $form_class=$row['class'];
+            $form_coursecode=$row['coursecode'];
+            $form_semester=$row['semester'];
+            $form_extrainfo=$row['extrainfo'];
         }
     }
+
+    $msg = "Hello, Your feedback will be completely anonymous. Current Threshold is "+$db->getThreshold().".";
+    echo "<script>alert('".$msg."')</script>";
+
 
 }
 
@@ -55,7 +71,12 @@ function test_input($data) {
                     <form name="feedbackform" action="processing.php" method="post">
                         <input type="hidden" name="task" value="recordfeedback">
                         <input type="hidden" name="formid" value="<?php echo $formid;?>">
-                    <?php
+                        <blockquote style="border:0px;"><center>
+                            <?php echo $form_coursecode."<br>".$form_year." - ".$form_class." - Semester ".$form_semester."<br>".$db->getStudentNameFormUid($formcreator)."<br>".$form_extrainfo; ?>
+                            </center>
+                        </blockquote>
+
+                        <?php
                     $result = $db->getFeedbackFormQuestion($formid);
                     if ($result->num_rows > 0) {
                         $i=1;

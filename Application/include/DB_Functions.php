@@ -141,7 +141,7 @@ class DB_Functions
     }
 
 
-    public function updateFeedbackForm($id, $title, $fromrange, $torange){
+    public function updateFeedbackForm($id, $title, $fromrange, $torange,  $coursecode, $year, $class, $semester,$extrainfo){
 
         $fid=$id;
         $uid=0;
@@ -157,12 +157,12 @@ class DB_Functions
             }
             $stmt->close();
 
-            $sql = "UPDATE feedback_form SET title = '".$title."', fromrange = '".$fromrange."', torange ='".$torange."' where uid = ".$id;
+            $sql = "UPDATE feedback_form SET title = '".$title."', fromrange = '".$fromrange."', torange ='".$torange."', coursecode ='".$coursecode."', year ='".$year."', class ='".$class."', semester ='".$semester."', extrainfo ='".$extrainfo."' where uid = ".$id;
             $result = $this->conn->query($sql);
 
         }
         else{
-            $sql = "UPDATE feedback_form SET title = '".$title."' where uid = ".$id;
+            $sql = "UPDATE feedback_form SET title = '".$title."', coursecode ='".$coursecode."', year ='".$year."', class ='".$class."', semester ='".$semester."', extrainfo ='".$extrainfo."' where uid = ".$id;
             $result = $this->conn->query($sql);
 
         }
@@ -179,6 +179,12 @@ class DB_Functions
         $result = $this->conn->query($sql);
         return $result;
     }
+    public function deleteStudentAssignment($id){
+        $sql = "DELETE FROM assignment where feedback_form_uid = ".$id;
+        $result = $this->conn->query($sql);
+        return $result;
+    }
+
 
     /**
      * Table : Feedback Question

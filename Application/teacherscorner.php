@@ -4,6 +4,10 @@
 
         <?php
 
+        if(!isset($_SESSION['user_type']) or $_SESSION['user_type']=='student')
+            echo '<script>window.location="index.php"</script>';
+
+
         $result = $db->getActiveForm($_SESSION['user_uuid']);
 
         if ($result->num_rows > 0) {

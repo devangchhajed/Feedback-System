@@ -8,6 +8,9 @@
 				<blockquote style="border:0px;"><h1>SPIT Feedback System</h1></blockquote>
 				<hr>
 				<?php
+                if(!isset($_SESSION['user_type']))
+                    echo '<script>window.location="index.php"</script>';
+
                 if($_SESSION['user_type']=="hod")
                     include 'hodspace.php';
                 if($_SESSION['user_type']=="faculty")
